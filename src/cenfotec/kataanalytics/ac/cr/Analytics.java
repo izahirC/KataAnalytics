@@ -25,13 +25,10 @@ public class Analytics {
 	    	if (sCadena.length() > palabraMasGrandeSize){
 	    		palabraMasGrande = sCadena;
 	    		palabraMasGrandeSize = sCadena.length();
-
-	    	}
-	    	
+	    	}	    	
 	    }
 	    
-	   return palabraMasGrande;
-	
+	   return palabraMasGrande;	
 	}
 	
 		

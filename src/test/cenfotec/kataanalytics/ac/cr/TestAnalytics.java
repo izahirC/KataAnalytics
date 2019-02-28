@@ -14,7 +14,7 @@ public class TestAnalytics {
 	public void testMasLarga() {
 		
 		String palabra = "casa casita casototota";
-		String palabra2 = "luz mueble cartas";
+		String palabra2 = "luz promotora mueble";
 		String palabra3 = "ama verde" ;
 		
 		String p1 = Analytics.masLarga(palabra);
@@ -22,7 +22,7 @@ public class TestAnalytics {
 		String p3 = Analytics.masLarga(palabra3);
 				
 		assertEquals("casototota", p1);
-		assertEquals("mueble", p2);
+		assertEquals("promotora", p2);
 		assertEquals("verde", p3);
 
 	}
@@ -30,8 +30,8 @@ public class TestAnalytics {
 	@Test
 	public void testMasCorta() {
 		
-		String palabra = "casita casa";
-		String palabra2 = "mueble luz";
+		String palabra = "casita casototota casa";
+		String palabra2 = "mueble arboleda anaranjado luz";
 		String palabra3 = "verde ama" ;
 		
 		String cadena1 = Analytics.masCorta(palabra);
@@ -60,9 +60,20 @@ public class TestAnalytics {
 
 	}
 	
-	
-	
-	
-	
 
+	@Test
+	public void testMasCortaOrdenado() {
+		
+		String pal = "reparto tren an";
+		String pal2 = "trenza azul";
+		String pal3 = "verde ama" ;
+		
+		String cade1 = Analytics.masCorta(pal);
+		String cade2 = Analytics.masCorta(pal2);
+		String cade3 = Analytics.masCorta(pal3);
+				
+		assertEquals("an", cade1);
+		assertEquals("azul", cade2);
+		assertEquals("ama", cade3);
+	}
 }
