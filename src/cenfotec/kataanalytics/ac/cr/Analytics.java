@@ -1,20 +1,10 @@
 package cenfotec.kataanalytics.ac.cr;
 
-import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class Analytics {
 
-	public static void main (String [] args) {
-		String txt = "casa casita casototota";
-		
-		masLarga(txt);
-		masCorta(txt);
-		
-		
-	}
 
-	
 	public static String masLarga(String cadenaPalabra) {
 		
 		String palabra = cadenaPalabra; 
@@ -43,8 +33,9 @@ public class Analytics {
 	   return palabraMasGrande;
 	
 	}
+	
 		
-public static String masCorta(String cadenaPalabra) {
+	public static String masCorta(String cadenaPalabra) {
 		
 		String palabra = cadenaPalabra; 
 		
@@ -52,6 +43,7 @@ public static String masCorta(String cadenaPalabra) {
 		
 		String sCadena;	    
 	    String palabraMasCorta = "";
+	    String palabraMasLarga = "";
 	    
 	 
 	    int palabraMasCortaSize = 0;
@@ -62,10 +54,12 @@ public static String masCorta(String cadenaPalabra) {
 	    	
 	    	sCadena = cadenaPalabras.nextToken();
 	    	
-	    	if (sCadena.length() < palabraMasCortaSize){
-	    		palabraMasCorta = sCadena;
+	    	if (sCadena.length() >  palabraMasCortaSize){
+	
 	    		palabraMasCortaSize = sCadena.length();
-
+	    	}else {
+	    		
+	    		palabraMasCorta = sCadena;
 	    	}
 	    	
 	    }

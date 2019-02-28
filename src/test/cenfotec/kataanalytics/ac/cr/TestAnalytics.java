@@ -3,7 +3,6 @@ package test.cenfotec.kataanalytics.ac.cr;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-import java.util.LinkedList;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,7 +14,7 @@ public class TestAnalytics {
 	public void testMasLarga() {
 		
 		String palabra = "casa casita casototota";
-		String palabra2 = "luz mueble cartas ";
+		String palabra2 = "luz mueble cartas";
 		String palabra3 = "ama verde" ;
 		
 		String p1 = Analytics.masLarga(palabra);
@@ -23,7 +22,7 @@ public class TestAnalytics {
 		String p3 = Analytics.masLarga(palabra3);
 				
 		assertEquals("casototota", p1);
-		assertEquals("cartas", p2);
+		assertEquals("mueble", p2);
 		assertEquals("verde", p3);
 		
 		
@@ -32,17 +31,38 @@ public class TestAnalytics {
 	@Test
 	public void testMasCorta() {
 		
-		String palabra = "casa casita casototota";
-		String palabra2 = "luz mueble cartas ";
-		String palabra3 = "ama verde" ;
+		String palabra = "casita casa";
+		String palabra2 = "mueble luz";
+		String palabra3 = "verde ama" ;
 		
-		String p1 = Analytics.masCorta(palabra);
+		String cadena1 = Analytics.masCorta(palabra);
 		String cadena2 = Analytics.masCorta(palabra2);
 		String cadena3 = Analytics.masCorta(palabra3);
 				
-		assertEquals("casa", p1);
+		assertEquals("casa", cadena1);
 		assertEquals("luz", cadena2);
 		assertEquals("ama", cadena3);
 	}
+	
+	@Test
+	public void testMasLargaOrdenado() {
+		
+		String palabra = "arbol lapicero maiz";
+		String palabra2 = "comida playa botella";
+		String palabra3 = "mujer rosa" ;
+		
+		String p1 = Analytics.masLarga(palabra);
+		String p2 = Analytics.masLarga(palabra2);
+		String p3 = Analytics.masLarga(palabra3);
+				
+		assertEquals("lapicero", p1);
+		assertEquals("botella", p2);
+		assertEquals("mujer", p3);
+		
+		
+	}
+	
+	
+	
 
 }
