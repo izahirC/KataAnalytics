@@ -24,8 +24,7 @@ public class TestAnalytics {
 		assertEquals("casototota", p1);
 		assertEquals("mueble", p2);
 		assertEquals("verde", p3);
-		
-		
+
 	}
 	
 	@Test
@@ -48,19 +47,20 @@ public class TestAnalytics {
 	public void testMasLargaOrdenado() {
 		
 		String palabra = "arbol lapicero maiz";
-		String palabra2 = "comida playa botella";
-		String palabra3 = "mujer rosa" ;
+		String palabra2 = "comida playas sol";
+		String palabra3 = "mujer rosas" ;
 		
 		String p1 = Analytics.masLarga(palabra);
 		String p2 = Analytics.masLarga(palabra2);
 		String p3 = Analytics.masLarga(palabra3);
 				
 		assertEquals("lapicero", p1);
-		assertEquals("botella", p2);
+		assertEquals("comida", p2);
 		assertEquals("mujer", p3);
-		
-		
+
 	}
+	
+	
 	
 	
 	
