@@ -28,5 +28,21 @@ public class TestAnalytics {
 		
 		
 	}
+	
+	@Test
+	public void testMasCorta() {
+		
+		String palabra = "casa casita casototota";
+		String palabra2 = "luz mueble cartas ";
+		String palabra3 = "ama verde" ;
+		
+		String p1 = Analytics.masCorta(palabra);
+		String cadena2 = Analytics.masCorta(palabra2);
+		String cadena3 = Analytics.masCorta(palabra3);
+				
+		assertEquals("casa", p1);
+		assertEquals("luz", cadena2);
+		assertEquals("ama", cadena3);
+	}
 
 }
